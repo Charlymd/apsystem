@@ -81,7 +81,7 @@ jobs:
           
    
   Scan:
-    needs: test
+    needs: [test,push]
     runs-on: ubuntu-latest
     steps:
           #docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
